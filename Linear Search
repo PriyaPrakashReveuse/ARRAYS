@@ -30,4 +30,5 @@ int main ()
   
   cout<<LinearSearch(arr,m,key);
   return 0;
+  
 }
