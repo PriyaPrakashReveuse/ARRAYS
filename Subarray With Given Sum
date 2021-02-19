@@ -34,7 +34,18 @@ int main()
       else if(arr[s]+arr[end]>sum)
       {
           s++;
+          store=arr[s]+arr[end];
+          if(store==sum)
+          {
+              cout<<s<<" "<<end<<endl;
+              break;
+          }
       }
+  }
+  
+  if(store!=sum)
+  {
+      cout<<"-1"<<endl;
   }
  
   return 0;
