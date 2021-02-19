@@ -1,0 +1,41 @@
+#include <iostream>
+#include<climits>
+
+using namespace std;
+
+int main()
+{
+  int n;
+  cin >> n;
+
+  int arr[n];
+  for (int i = 0; i < n; i++)
+  {
+      cin >> arr[i];
+  }
+  
+  int sum;
+  cin>>sum;
+  
+  int store=0, s=1,end=1;
+  
+  for(int i=0;i<n;i++)
+  {
+      if(arr[s]+arr[end]<sum)
+      {
+          store=arr[s]+arr[end];
+          end++;
+      }
+      else if(arr[s]+arr[end]==sum)
+      {
+          cout<<s<<" "<<end<<endl;
+          break;
+      }
+      else if(arr[s]+arr[end]>sum)
+      {
+          s++;
+      }
+  }
+ 
+  return 0;
+}
